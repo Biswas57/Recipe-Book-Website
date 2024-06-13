@@ -1,11 +1,7 @@
-# Bis' Kitchen
-
-### Overview:
+Overview:
 Bis's kitchen is a dynamic web application tailored for everyday food enthusiasts. Designed with a modern UI, it's a platform used to search a wide array of delicious dishes from various cuisines, explore detailed recipes, and even find dishes based on specific search criteria.
-- Developed a database website called Bis’ Kitchen to search and return a range of dishes from various cuisines, using API integration.
-- Developed skills in designing an interactive frontend for the website using React and HTML, with React Router and styled-components to develop skills in building and enhancing UI.
 
-### Features:
+Features:
 
 Home Page: A welcoming page that provides users with an introduction to the platform.
 

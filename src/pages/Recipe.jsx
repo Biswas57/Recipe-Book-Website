@@ -30,28 +30,28 @@ function Recipe() {
                 </ImageWrapper>
             </div>
             <Info>
-                <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>
-                    Instructions
-                </Button>
                 <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>
                     Ingredients
                 </Button>
+                <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>
+                    Instructions
+                </Button>
                 <TextWrapper>
-                    {activeTab === 'instructions' && (
-                        <div>
-                            <h3>Overview: </h3>
-                            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-                            <h3>Procedure: </h3>
-                            <ol className="instructions" dangerouslySetInnerHTML={{ __html: details.instructions }}></ol>
-                        </div>
-                    )}
                     {activeTab === 'ingredients' && (
                         <ul>
+                            <h3>Overview: </h3>
+                            <h3 className="summary" dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
                             <h3>Ingredients: </h3>
                             {details.extendedIngredients?.map((ingredient) => (
                                 <li key={ingredient.id}>{ingredient.original}</li>
                             ))}
                         </ul>
+                    )}
+                    {activeTab === 'instructions' && (
+                        <div>
+                            <h3>Procedure: </h3>
+                            <ol className="instructions" dangerouslySetInnerHTML={{ __html: details.instructions }}></ol>
+                        </div>
                     )}
                 </TextWrapper>
             </Info>
